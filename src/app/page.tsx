@@ -1,9 +1,8 @@
-import Image from "next/image";
+import PageLayout from "@/components/PageLayout";
+import React from "react";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="font-bold">Initialize Blog App</h1>
-    </main>
-  );
-}
+const Dashboard = () => {
+  return <PageLayout>Dashboard</PageLayout>;
+};
+
+export default Dashboard;
