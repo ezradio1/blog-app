@@ -1,9 +1,7 @@
-import React from "react";
-import Container from "../Container";
-import { SOCIAL_MEDIA_LIST } from "./index.constants";
-import Tooltip from "../Tooltip";
 import Button from "../Button";
+import Container from "../Container";
 import Input from "../Input";
+import { SOCIAL_MEDIA_LIST } from "./index.constants";
 
 const Footer = () => {
   return (
@@ -17,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-2 md:w-1/3 justify-end">
+          <div className="flex flex-col md:flex-row gap-2 md:w-1/3 justify-end">
             <Input placeholder="example@gmail.com" type="email" />
             <Button>Subscribe</Button>
           </div>
