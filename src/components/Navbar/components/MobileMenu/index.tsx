@@ -13,7 +13,7 @@ const MobileMenu = (props: MobileMenuProps) => {
   return (
     <div
       className={clsx(
-        "absolute transition-all duration-500 h-full top-0 overflow-hidden w-screen bg-black bg-opacity-60 right-0 left-0",
+        "z-50 absolute transition-all duration-500 h-screen top-0 overflow-hidden w-[calc(100vw+1rem)] bg-black bg-opacity-60 right-0 -left-4",
         {
           "opacity-100": visible,
           "opacity-0 pointer-events-none": !visible,
@@ -40,10 +40,8 @@ const MobileMenu = (props: MobileMenuProps) => {
             <FiX />
           </div>
         </div>
-
         <hr className="my-2" />
-
-        <div className="flex gap-2 flex-col mt-4">
+        <div className="flex gap-2 flex-col mt-4 z-50">
           {MENUS.map((menu, key) => (
             <div
               key={key}
