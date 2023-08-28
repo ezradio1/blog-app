@@ -1,11 +1,30 @@
+"use client";
+import { EMAIL_REGEX } from "@/constants/regex";
 import Button from "../Button";
 import Container from "../Container";
 import Input from "../Input";
 import { SOCIAL_MEDIA_LIST } from "./index.constants";
+import useIndex from "./index.hook";
+import Modal from "../Modal";
+import { noop } from "@/helpers/noop";
+import ModalSuccess from "./components/ModalSuccess";
 
 const Footer = () => {
+  const {
+    email,
+    setEmail,
+    handleSubscribe,
+    loading,
+    modalSuccess,
+    setModalSuccess,
+  } = useIndex();
+
   return (
-    <div className="bottom-0 border-t w-full">
+    <div className="bottom-0 border-t w-full text-primary">
+      <ModalSuccess
+        isOpen={modalSuccess}
+        onClose={() => setModalSuccess(false)}
+      />
       <Container>
         <div className="py-4 md:py-8 flex flex-col md:flex-row gap-4 justify-between">
           <div className="text-center md:text-left">
@@ -16,8 +35,24 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-2 md:w-1/3 justify-end">
-            <Input placeholder="example@gmail.com" type="email" />
-            <Button>Subscribe</Button>
+            <Input
+              onChange={(evt) => setEmail(evt.target.value)}
+              value={email}
+              placeholder="example@gmail.com"
+              type="email"
+              errorMsg={
+                !EMAIL_REGEX.test(email) && email ? "Email is not valid" : ""
+              }
+            />
+            <Button
+              disabled={
+                email === "" || (!EMAIL_REGEX.test(email) && email !== "")
+              }
+              onClick={handleSubscribe}
+              loading={loading}
+            >
+              Subscribe
+            </Button>
           </div>
         </div>
 
