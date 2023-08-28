@@ -39,20 +39,24 @@ const Modal = (props: ModalProps) => {
           }
         )}
       >
-        <div className="flex justify-between items-center mb-4">
-          <p className="uppercase font-semibold">{title}</p>
-          <div className="py-2 pl-2 cursor-pointer" onClick={onClose}>
-            <FiX />
+        {title && (
+          <div className="flex justify-between items-center mb-4">
+            <p className="uppercase font-semibold">{title}</p>
+            <div className="py-2 pl-2 cursor-pointer" onClick={onClose}>
+              <FiX />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex flex-col gap-2">
           <div className="py-3">{children}</div>
-          <hr className="my-2" />
           {onSubmit !== noop ? (
-            <Button loading={loading} onClick={onSubmit}>
-              Submit
-            </Button>
+            <>
+              <hr className="my-2" />
+              <Button loading={loading} onClick={onSubmit}>
+                Submit
+              </Button>
+            </>
           ) : null}
         </div>
       </div>
