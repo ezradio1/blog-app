@@ -9,26 +9,35 @@ const Input = (props: InputProps) => {
     name,
     errorMsg = "",
     withError = true,
+    icon = null,
+    className = "",
   } = props;
 
   return (
-    <div className="flex flex-col">
+    <div className={clsx("flex flex-col min-w-[220px]", className)}>
       {label ? (
         <label className="text-xs mb-1" htmlFor={name}>
           {label}
         </label>
       ) : null}
-      <input
-        {...props}
-        className={clsx(
-          "rounded min-w-[220px] py-[6px] h-10 px-[16px] text-sm  outline-primary border-gray-400 border font-medium",
-          {
-            "border-red-500": errorMsg !== "",
-          }
-        )}
-      >
-        {children}
-      </input>
+
+      <div className="relative">
+        <input
+          {...props}
+          className={clsx(
+            "rounded w-full py-[6px] h-10 px-[16px] text-sm  outline-primary border-gray-400 border font-medium",
+            {
+              "border-red-500": errorMsg !== "",
+              "pl-8": icon,
+            }
+          )}
+        >
+          {children}
+        </input>
+        <div className="absolute top-1/2 -translate-y-1/2 transform left-3">
+          {icon}
+        </div>
+      </div>
 
       {withError ? (
         <div className="h-4 leading-tight">

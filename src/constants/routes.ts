@@ -1,5 +1,6 @@
 export const ROUTES = {
-  BLOG: "/",
+  DASHBOARD: "/",
+  BLOG: "/blog",
   USERS: "/users",
   PRODUCTS: "/products",
   RESOURCES: "/resources",

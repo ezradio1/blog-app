@@ -3,11 +3,9 @@ import { EMAIL_REGEX } from "@/constants/regex";
 import Button from "../Button";
 import Container from "../Container";
 import Input from "../Input";
+import ModalSuccess from "./components/ModalSuccess";
 import { SOCIAL_MEDIA_LIST } from "./index.constants";
 import useIndex from "./index.hook";
-import Modal from "../Modal";
-import { noop } from "@/helpers/noop";
-import ModalSuccess from "./components/ModalSuccess";
 
 const Footer = () => {
   const {

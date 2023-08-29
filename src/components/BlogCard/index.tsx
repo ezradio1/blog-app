@@ -1,19 +1,16 @@
-import Button from "@/components/Button";
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { BlogCardProps } from "./index.types";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/constants/routes";
 
 const BlogCard = (props: BlogCardProps) => {
-  const data = {
-    image: "https://picsum.photos/200",
-    author: "2",
-    title: "Demulceo sortitus audax est unus architecto dolorem sint absorbeo.",
-    body: "Cupressus claro aut. Desipio teneo comis. Cunabula surgo bonus. Degusto theatrum illo. Sed defleo pel. Cenaculum cultellus amoveo. Temperantia acervus usus. Et alter eos. Culpa reprehenderit pecus. Surculus dolore vito. Vitium tenus cenaculum. Caput sufficio viriliter. Cenaculum curia repellat. Uter curso degenero. Vitiosus abeo tero.",
-  };
   const { id, title, body, image } = props;
+  const router = useRouter()
+
   return (
-    <div className="group h-96 relative cursor-pointer transition-all duration-500 ease-out">
+    <div className="group h-96 relative cursor-pointer transition-all duration-500 ease-out" onClick={()=>router.push(`${ROUTES.BLOG}/${id}`)}>
       <div className="h-[65%] relative rounded">
         <Image
           src={image}
