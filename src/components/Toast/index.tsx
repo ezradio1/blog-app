@@ -18,7 +18,7 @@ const Toast = () => {
   return (
     <div
       className={clsx(
-        "fixed top-0 z-[99] mx-auto flex justify-center border",
+        "fixed top-0 z-[99] mx-auto flex justify-center",
         {
           "left-1/2 right-0": align === "right",
           "left-0 right-1/2": align === "left",

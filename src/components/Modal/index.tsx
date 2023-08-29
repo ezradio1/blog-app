@@ -40,11 +40,14 @@ const Modal = (props: ModalProps) => {
         )}
       >
         {title && (
-          <div className="flex justify-between items-center mb-4">
-            <p className="uppercase font-semibold">{title}</p>
-            <div className="py-2 pl-2 cursor-pointer" onClick={onClose}>
-              <FiX />
+          <div >
+            <div className="flex justify-between items-center">
+              <p className="uppercase font-semibold">{title}</p>
+              <div className="py-2 pl-2 cursor-pointer" onClick={onClose}>
+                <FiX />
+              </div>
             </div>
+            <hr  className="my-2"/>
           </div>
         )}
 
