@@ -31,15 +31,17 @@ const Pagination = (props: PaginationProps) => {
       >
         <FiChevronLeft color={isPrevDisabled ? GRAY["300"] : PRIMARY} />
       </div>
-      {/* {pageNumbers.map((page, key) => (
+      {pageNumbers.map((page, key) => (
         <div
-          className={actionClassName(false)}
+          className={clsx(actionClassName(false), {
+            "bg-primary text-white": currentPage === page,
+          })}
           onClick={isPrevDisabled ? noop : () => onChangePagination(page)}
           key={key}
         >
           <p>{page}</p>
         </div>
-      ))} */}
+      ))}
       <div
         className={actionClassName(isNextDisabled)}
         onClick={isNextDisabled ? noop : () => onChangePagination("+")}

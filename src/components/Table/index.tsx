@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
-import { TableProps } from "./index.types";
-import clsx from "clsx";
 import Loader from "@/assets/SVG/Loader";
-import EmptyData from "@/assets/SVG/EmptyData";
+import clsx from "clsx";
+import EmptyState from "../EmptyState";
 import Pagination from "./components/Pagination";
+import { TableProps } from "./index.types";
 
 const Table = <T extends Record<string, string | number>>(
   props: TableProps<T>
@@ -44,10 +43,7 @@ const Table = <T extends Record<string, string | number>>(
             {!loading && data.length === 0 ? (
               <tr className="border">
                 <td colSpan={columns.length} className="py-8">
-                  <EmptyData />
-                  <p className="text-center mt-2 font-medium">
-                    No data available
-                  </p>
+                  <EmptyState size={125} />
                 </td>
               </tr>
             ) : loading ? (

@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { PaginationParams } from "./components/Pagination/index.types";
 
 export interface TableColumn<T> {
   key: string;
@@ -12,6 +13,6 @@ export interface TableProps<T> {
   columns: TableColumn<T>[];
   data: T[];
   loading: boolean;
-  onChangePagination: (key: "+" | "-" | number) => void;
+  onChangePagination: (key: PaginationParams) => void;
   currentPage: number;
 }

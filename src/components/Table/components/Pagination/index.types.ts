@@ -1,6 +1,8 @@
 export interface PaginationProps {
   isPrevDisabled: boolean;
   isNextDisabled: boolean;
-  onChangePagination: (key: "+" | "-" | number) => void;
+  onChangePagination: (key: PaginationParams) => void;
   currentPage: number;
 }
+
+export type PaginationParams = "+" | "-" | number;

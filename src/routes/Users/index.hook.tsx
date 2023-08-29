@@ -10,6 +10,7 @@ import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { FaFemale, FaMale } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { MODAL_TYPE } from "./index.constants";
+import { PaginationParams } from "@/components/Table/components/Pagination/index.types";
 
 const useIndex = () => {
   const [modal, setModal] = useState<null | string>(null);
@@ -155,7 +156,7 @@ const useIndex = () => {
     }
   };
 
-  const handlePagination = (key: "+" | "-" | number) => {
+  const handlePagination = (key: PaginationParams) => {
     setQueryparams((prevState) => ({
       ...prevState,
       page: typeof key === "number" ? key : eval(`${prevState.page} ${key} 1`),
