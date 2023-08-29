@@ -1,20 +1,20 @@
 import PageLayout from "@/components/PageLayout";
-import BlogComponent from "@/routes/Blog";
+import DashboardComponent from "@/routes/Dashboard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LuminaLife Blog | Blog",
+  title: "LuminaLife Blog | Dashboard",
   description:
-    "Discover inspiration and insights for personal growth and holistic well-being at LuminaLife Blog. Explore mental health, self-development, balanced lifestyles, and more. Join us on the journey to a radiant life.",
+    "Discover inspiration and insights for personal growth and holistic well-being at LuminaLife Dashboard. Explore mental health, self-development, balanced lifestyles, and more. Join us on the journey to a radiant life.",
   icons: "/src/app/favicon.ico",
 };
 
-const Blog = () => {
+const Dashboard = () => {
   return (
     <PageLayout>
-      <BlogComponent />
+      <DashboardComponent />
     </PageLayout>
   );
 };
 
-export default Blog;
+export default Dashboard;
