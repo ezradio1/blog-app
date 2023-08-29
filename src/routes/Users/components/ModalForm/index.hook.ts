@@ -43,6 +43,7 @@ const useIndex = ({
     });
 
     if (!EMAIL_REGEX.test(form.email) && form.email) {
+      isValid = false;
       setErrorMsg((prevState) => ({
         ...prevState,
         email: "Please input valid email!",
