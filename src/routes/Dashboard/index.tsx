@@ -4,6 +4,8 @@ import { generateRandomImage } from "@/helpers/generateRandomImage";
 import ExploreMore from "./components/ExploreMore";
 import Headline from "./components/Headline";
 import type { BlogData } from "./index.types";
+import EmptyState from "@/components/EmptyState";
+import ErrorState from "@/components/ErrorState";
 
 const getBlogList = async () => {
   const res = await fetchData<BlogData[]>(`posts?per_page=4&page=1`);
@@ -13,7 +15,8 @@ const getBlogList = async () => {
 const Dashboard = async () => {
   const { data, error } = await getBlogList();
 
-  if (!data || error) return <div>{error}</div>;
+  if (error) return <ErrorState />;
+  if (!data) return <EmptyState />;
 
   const firstData = data.slice(0, 1)?.[0];
 
