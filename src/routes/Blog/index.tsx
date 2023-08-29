@@ -1,7 +1,7 @@
 import BlogCard from "@/components/BlogCard";
 import { fetchData } from "@/helpers/fetchData";
 import { generateRandomImage } from "@/helpers/generateRandomImage";
-import { SearchParamsType } from "@/types/searchParams";
+import type { SearchParamsType } from "@/types/layoutProps";
 import Pagination from "./components/Pagination";
 import { BlogData } from "./index.types";
 import SearchInput from "./components/SearchInput";

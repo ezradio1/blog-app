@@ -10,7 +10,10 @@ const BlogCard = (props: BlogCardProps) => {
   const router = useRouter()
 
   return (
-    <div className="group h-96 relative cursor-pointer transition-all duration-500 ease-out" onClick={()=>router.push(`${ROUTES.BLOG}/${id}`)}>
+    <div
+      className="group h-96 relative cursor-pointer transition-all duration-500 ease-out"
+      onClick={() => router.push(`${ROUTES.BLOG_DETAIL}/${id}`)}
+    >
       <div className="h-[65%] relative rounded">
         <Image
           src={image}

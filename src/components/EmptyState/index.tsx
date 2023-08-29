@@ -1,6 +1,6 @@
 import EmptyIllustration from "@/assets/img/empty-illustration.png";
 import Image from "next/image";
-import { EmptyStateProps } from "./index.types";
+import type { EmptyStateProps } from "./index.types";
 
 const EmptyState = (props: EmptyStateProps) => {
   const { size = 200 } = props;
