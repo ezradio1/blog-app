@@ -15,7 +15,7 @@ const MobileMenu = (props: MobileMenuProps) => {
   return (
     <div
       className={clsx(
-        "z-50 absolute transition-all duration-500 h-screen top-0 overflow-hidden w-screen bg-black bg-opacity-60 right-0 -left-4",
+        "z-50 absolute transition-all duration-500 h-screen top-0 overflow-hidden w-screen bg-black bg-opacity-60 right-0 left-0",
         {
           "opacity-100": visible,
           "opacity-0 pointer-events-none": !visible,
@@ -25,7 +25,7 @@ const MobileMenu = (props: MobileMenuProps) => {
       <div
         ref={menuRef}
         className={clsx(
-          "bg-white px-4 py-2 h-full duration-500 transition-all",
+          "bg-white p-2 pl-0 h-full duration-500 transition-all",
           {
             "w-3/4": visible,
             "w-0": !visible,
