@@ -12,15 +12,17 @@ LuminaLife Blog is built using the following technologies:
 ## Project Structure
 The project's folder structure is organized as follows:
 
-├── app           # The route pages implemented using Next.js.
-├── assets        # All assets used in the application.
-├── components    # Base components used across multiple pages.
-├── constants     # Global constants used throughout the application.
-├── helpers       # Global helper functions utilized in different parts of the app.
-├── hooks         # Global custom hooks created for various functionalities.
-├── routes        # Fundamental page components invoked from the `app` folder.
-├── redux         # Configuration and setup of Redux using Redux Toolkit.
-└── types         # Global TypeScript types used across different parts of the application.
+
+- app: The route pages implemented using Next.js.
+- assets: All assets used in the application.
+- components: Base components used across multiple pages.
+- constants: Global constants used throughout the application.
+- helpers: Global helper functions utilized in different parts of the app.
+- hooks: Global custom hooks created for various functionalities.
+- routes: Fundamental page components invoked from the `app` folder.
+- redux: Configuration and setup of Redux using Redux Toolkit.
+- types: Global TypeScript types used across different parts of the application.
+
 
 ## Features
 LuminaLife Blog offers four main routes with distinct features:
