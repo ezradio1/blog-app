@@ -49,6 +49,7 @@ const Users = () => {
             onChange={handleChangeFilter}
             name="gender"
             clearIcon
+            withError={false}
           />
           <Select
             options={Object.values(STATUS).map((status) => {
@@ -62,6 +63,7 @@ const Users = () => {
             onChange={handleChangeFilter}
             name="status"
             clearIcon
+            withError={false}
           />
           <Select
             additionalValueText="Search by "
@@ -70,6 +72,7 @@ const Users = () => {
             value={filter.searchBy}
             onChange={handleChangeFilter}
             name="searchBy"
+            withError={false}
           />
           <Input
             placeholder="Search user here..."
