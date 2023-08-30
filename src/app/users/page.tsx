@@ -1,20 +1,15 @@
-"use client";
-import PageLayout from "@/components/PageLayout";
-import UsersComponent from "@/routes/Users";
-import Head from "next/head";
+import { Metadata } from "next";
+import UsersComponent from "./";
+
+export const metadata: Metadata = {
+  title: "LuminaLife Blog | Users",
+  description:
+    "Discover the profiles and stories of our diverse and vibrant community",
+  icons: "/src/app/favicon.ico",
+};
 
 const Users = () => {
-  return (
-    <>
-      <Head>
-        <title>LuminaLife Blog | Users</title>
-      </Head>
-      
-      <PageLayout isSSR={false}>
-        <UsersComponent />
-      </PageLayout>
-    </>
-  );
+  return <UsersComponent />;
 };
 
 export default Users;
