@@ -59,7 +59,7 @@ const useIndex = () => {
     }
   }, [searchValue, filter]);
 
-  const columns: TableColumn<any>[] = [
+  const columns: TableColumn<UserData>[] = [
     {
       key: "no",
       header: "no",

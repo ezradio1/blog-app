@@ -1,5 +1,5 @@
 import useGetAllQueryParams from "@/hooks/useGetAllQueryParams";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 const useIndex = () => {
@@ -11,7 +11,7 @@ const useIndex = () => {
 
   const [search, setSearch] = useState(searchQueryParams);
 
-  const handleClickEnter = (evt: any) => {
+  const handleClickEnter = (evt: KeyboardEvent) => {
     if (evt.code === "Enter") {
       handleSearch();
     }

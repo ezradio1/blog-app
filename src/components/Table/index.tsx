@@ -7,9 +7,7 @@ import Select from "../Select";
 import { PER_PAGE_OPTIONS } from "./index.constants";
 import { noop } from "@/helpers/noop";
 
-const Table = <T extends Record<string, string | number>>(
-  props: TableProps<T>
-) => {
+const Table = <T extends unknown>(props: TableProps<T>) => {
   const {
     columns,
     data,
@@ -71,22 +69,30 @@ const Table = <T extends Record<string, string | number>>(
                     key={rowIndex}
                     className="border-b border-gray-200 hover:bg-gray-100"
                   >
-                    {columns.map((column, colIndex) => (
-                      <td
-                        key={colIndex}
-                        className={clsx(
-                          "py-3 px-4",
-                          getAlignment(column.align || "left"),
-                          column.width
-                        )}
-                      >
-                        {column.key === "no"
-                          ? `${Number(rowIndex + 1 + (currentPage - 1) * 10)}.`
-                          : column.render
-                          ? column.render(item)
-                          : item[column.key]}
-                      </td>
-                    ))}
+                    {columns.map((column, colIndex) => {
+                      const normalizedItem = item as unknown as Record<
+                        string,
+                        string | number
+                      >;
+                      return (
+                        <td
+                          key={colIndex}
+                          className={clsx(
+                            "py-3 px-4",
+                            getAlignment(column.align || "left"),
+                            column.width
+                          )}
+                        >
+                          {column.key === "no"
+                            ? `${Number(
+                                rowIndex + 1 + (currentPage - 1) * 10
+                              )}.`
+                            : column.render
+                            ? column.render(item)
+                            : normalizedItem[column.key]}
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))}
               </>
