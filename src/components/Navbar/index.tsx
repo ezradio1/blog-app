@@ -17,7 +17,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="sticky top-0 z-30 py-3 bg-white md:py-6 flex justify-between items-center">
+    <div className="fixed w-full top-0 z-30 py-3 bg-white md:py-6 flex justify-between items-center">
       <div className="block md:hidden">
         <div
           className="cursor-pointer "

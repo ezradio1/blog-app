@@ -13,7 +13,7 @@ const PageLayout = (props: PageLayoutProps) => {
     <>
       <Container>
         <Navbar />
-        <div className="min-h-[calc(100vh-70px-210px)] py-4">
+        <div className="min-h-[calc(100vh-70px-210px)] mt-[70px] py-4">
           {!isSSR ? (
             <Provider store={store}>
               <Toast />
