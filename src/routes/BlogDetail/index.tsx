@@ -52,7 +52,7 @@ const BlogDetail = async ({ params }: BlogDetailProps) => {
             objectFit="cover"
           />
         </div>
-        <p className="text-justify">{body}</p>
+        <p className="text-justify md:text-base text-sm">{body}</p>
       </div>
       <CommentsSection blogId={blogId} />
     </div>

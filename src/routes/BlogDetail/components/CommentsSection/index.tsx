@@ -26,23 +26,27 @@ const CommentsSection = async (props: CommentsSectionProps) => {
           <div className="flex flex-col gap-4 mt-2">
             {data.map((comment, key) => (
               <div key={key} className="flex gap-2">
-                <div className="w-9 h-9 bg-gray-300 rounded-full relative mt-1">
-                  <Image
-                    src={DummyPhoto}
-                    fill
-                    alt="dummy-photo.png"
-                    objectFit="cover"
-                    className="rounded-full"
-                  />
+                <div className="w-[38px]">
+                  <div className="w-9 h-9 bg-gray-300 rounded-full relative mt-1">
+                    <Image
+                      src={DummyPhoto}
+                      fill
+                      alt="dummy-photo.png"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
                 </div>
                 <div>
                   <div className="flex flex-col md:flex-row md:items-center gap-0 md:gap-3">
                     <p className="font-medium text-primary">{comment.name}</p>
-                    <span className="text-xs text-gray-400">
+                    <p className="text-xs text-gray-400">
                       {comment.email}
-                    </span>
+                    </p>
                   </div>
-                  <p className="text-sm mt-2 md:mt-0">{comment.body}</p>
+                  <p className="md:text-sm text-xs mt-1 md:mt-0">
+                    {comment.body}
+                  </p>
                 </div>
               </div>
             ))}

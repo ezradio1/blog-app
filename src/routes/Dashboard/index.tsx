@@ -40,9 +40,9 @@ const Dashboard = async () => {
       <h2 className="font-semibold uppercase text-2xl mb-2 mt-12 text-black">
         Recomended
       </h2>
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-3">
         {data.slice(4).map((el, key) => (
-          <div key={key} className="basis-60 hidden lg:block">
+          <div key={key}>
             <BlogCard {...el} image={generateRandomImage(key * 2)} />
           </div>
         ))}

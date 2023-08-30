@@ -32,7 +32,7 @@ const Modal = (props: ModalProps) => {
       ></div>
       <div
         className={clsx(
-          "bg-white max-w-[600px] min-w-[95vw] md:min-w-[450px] p-4 rounded-lg z-10 transform transition-transform duration-300 ease-in-out",
+          "bg-white max-w-[90vw] md:max-w-[600px] min-w-[95vw] md:min-w-[450px] p-4 rounded-lg z-10 transform transition-transform duration-300 ease-in-out",
           {
             "translate-y-full": !isOpen,
             "translate-y-0": isOpen,

@@ -10,7 +10,7 @@ const ModalSuccess = (props: ModalSuccessProps) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="flex items-center flex-col">
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl text-center">
           Thank you for subscribing to{" "}
           <span className="font-bold">LuminaLife Blog</span>
         </p>
@@ -18,7 +18,7 @@ const ModalSuccess = (props: ModalSuccessProps) => {
           Stay tuned for new, interesting and accurate news from us. You can
           also get promo information on merchants who work with us|
         </p>
-        <p className="mt-4 text-xs text-gray-400">
+        <p className="mt-4 text-xs text-center text-gray-400">
           This pop up will be closed in {countDown} seconds or click the button
           bellow to close it
         </p>
