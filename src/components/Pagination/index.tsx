@@ -40,7 +40,7 @@ const Pagination = (props: PaginationProps) => {
     );
 
   return (
-    <div className="flex mt-4 gap-1 md:gap-2">
+    <div className="flex gap-1 md:gap-2">
       <div
         className={actionClassName(isPrevDisabled)}
         onClick={isPrevDisabled ? noop : () => onChangePagination("-")}

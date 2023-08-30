@@ -27,6 +27,7 @@ const Users = () => {
     getUserData,
     filter,
     handleChangeFilter,
+    handleChangeRowPerPage,
   } = useIndex();
   if (!data || error) return <div>{error}</div>;
 
@@ -88,6 +89,8 @@ const Users = () => {
           loading={loading || loadingSearch}
           onChangePagination={(key) => handlePagination(key)}
           currentPage={queryParams.page}
+          rowsPerPage={queryParams.per_page}
+          onChangeRowPerPage={handleChangeRowPerPage}
         />
       </div>
       <ModalForm

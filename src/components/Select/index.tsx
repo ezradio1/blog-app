@@ -16,6 +16,7 @@ const Select = (props: SelectProps) => {
     clearIcon = false,
     withError = true,
     errorMsg = "",
+    className = "",
   } = props;
   const {
     isOpen,
@@ -26,7 +27,7 @@ const Select = (props: SelectProps) => {
   } = useIndex(props);
 
   return (
-    <div className="flex flex-col">
+    <div className={clsx("flex flex-col", className)}>
       {label ? (
         <label className="text-xs mb-1" htmlFor={name}>
           {label}
@@ -49,7 +50,8 @@ const Select = (props: SelectProps) => {
               "rounded w-full cursor-pointer py-[6px] h-10 px-[16px] text-sm  outline-primary border-gray-400 border font-medium",
               {
                 "border-red-500": errorMsg !== "",
-              }
+              },
+              className
             )}
           >
             {children}

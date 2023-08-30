@@ -15,4 +15,6 @@ export interface TableProps<T> {
   loading: boolean;
   onChangePagination: (key: PaginationParams) => void;
   currentPage: number;
+  rowsPerPage?: number;
+  onChangeRowPerPage?: (value: number) => void;
 }

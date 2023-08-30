@@ -10,7 +10,7 @@ const useIndex = ({ onChange, name }: SelectProps) => {
     setIsOpen(false);
   });
 
-  const handleChooseItem = (value: string) => {
+  const handleChooseItem = (value: string | number) => {
     const event = {
       target: {
         value,

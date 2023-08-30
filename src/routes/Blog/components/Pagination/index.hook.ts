@@ -1,4 +1,4 @@
-import { PaginationParams } from "@/components/Table/components/Pagination/index.types";
+import type { PaginationParams } from "@/components/Pagination/index.types";
 import useGetAllQueryParams from "@/hooks/useGetAllQueryParams";
 import { usePathname, useRouter } from "next/navigation";
 

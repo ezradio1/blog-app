@@ -1,8 +1,8 @@
-import { TableColumn } from "@/components/Table/index.types";
+import type { TableColumn } from "@/components/Table/index.types";
 import Tag from "@/components/Tag";
 import { getUsers } from "@/redux/actions/user";
-import { UserAction } from "@/redux/actions/user/index.types";
-import { UserData } from "@/redux/reducers/user/index.types";
+import type { UserAction } from "@/redux/actions/user/index.types";
+import type { UserData } from "@/redux/reducers/user/index.types";
 import { RootState } from "@/redux/store";
 import { ThunkDispatch } from "@reduxjs/toolkit";
 import { AppRouterState } from "next/dist/client/components/router-reducer/router-reducer-types";
@@ -10,7 +10,7 @@ import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { FaFemale, FaMale } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { MODAL_TYPE } from "./index.constants";
-import { PaginationParams } from "@/components/Pagination/index.types";
+import type { PaginationParams } from "@/components/Pagination/index.types";
 
 const useIndex = () => {
   const [modal, setModal] = useState<null | string>(null);
@@ -163,6 +163,13 @@ const useIndex = () => {
     }));
   };
 
+  const handleChangeRowPerPage = (value: number) => {
+    setQueryparams((prevState) => ({
+      ...prevState,
+      per_page: value,
+    }));
+  };
+
   const handleDeleteUser = (data: UserData) => {
     setSelectedUser(data);
     setModal(MODAL_TYPE.DELETE_USER);
@@ -189,6 +196,7 @@ const useIndex = () => {
     getUserData,
     filter,
     handleChangeFilter,
+    handleChangeRowPerPage,
   };
 };
 
