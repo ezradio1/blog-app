@@ -2,6 +2,7 @@ import useClickOutside from "@/hooks/useClickOutside";
 import { useRef, useState } from "react";
 import type { MobileMenuProps } from "./index.types";
 import { useRouter } from "next/navigation";
+import { ROUTES } from "@/constants/routes";
 
 const useIndex = ({ onCloseMenu }: MobileMenuProps) => {
   const [isHover, setIsHover] = useState(-1);
@@ -17,7 +18,11 @@ const useIndex = ({ onCloseMenu }: MobileMenuProps) => {
     onCloseMenu();
   };
 
-  return { menuRef, isHover, setIsHover, handleClickMenu };
+  const handleClickLogo = () => {
+    router.push(ROUTES.DASHBOARD);
+  };
+
+  return { menuRef, isHover, setIsHover, handleClickMenu, handleClickLogo };
 };
 
 export default useIndex;

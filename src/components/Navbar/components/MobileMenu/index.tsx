@@ -5,15 +5,17 @@ import { FiX } from "react-icons/fi";
 import { MENUS } from "../../index.constants";
 import useIndex from "./index.hook";
 import type { MobileMenuProps } from "./index.types";
+import { ROUTES } from "@/constants/routes";
 
 const MobileMenu = (props: MobileMenuProps) => {
   const { visible, onCloseMenu } = props;
-  const { menuRef, isHover, setIsHover, handleClickMenu } = useIndex(props);
+  const { menuRef, isHover, setIsHover, handleClickMenu, handleClickLogo } =
+    useIndex(props);
 
   return (
     <div
       className={clsx(
-        "z-50 absolute transition-all duration-500 h-screen top-0 overflow-hidden w-[calc(100vw+1rem)] bg-black bg-opacity-60 right-0 -left-4",
+        "z-50 absolute transition-all duration-500 h-screen top-0 overflow-hidden w-screen bg-black bg-opacity-60 right-0 -left-4",
         {
           "opacity-100": visible,
           "opacity-0 pointer-events-none": !visible,
@@ -31,9 +33,11 @@ const MobileMenu = (props: MobileMenuProps) => {
         )}
       >
         <div className="flex py-2 justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={handleClickLogo}>
             <Image src={AppLogo} alt="app-logo.png" width={30} height={30} />
-            <h2 className="md:font-bold text-xs md:text-lg">LuminaLife Blog</h2>
+            <h2 className="font-bold text-xs md:text-lg text-primary">
+              LuminaLife Blog
+            </h2>
           </div>
 
           <div className="cursor-pointer p-2" onClick={onCloseMenu}>
@@ -51,7 +55,7 @@ const MobileMenu = (props: MobileMenuProps) => {
               onClick={() => handleClickMenu(menu.route)}
             >
               <p
-                className={clsx("cursor-pointer text-base", {
+                className={clsx("cursor-pointer text-base text-primary", {
                   "font-medium": isHover === key,
                 })}
               >
