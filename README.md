@@ -12,7 +12,6 @@ LuminaLife Blog is built using the following technologies:
 ## Project Structure
 The project's folder structure is organized as follows:
 
-
 - app: The route pages implemented using Next.js.
 - assets: All assets used in the application.
 - components: Base components used across multiple pages.
