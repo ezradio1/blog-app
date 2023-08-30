@@ -11,7 +11,7 @@ const ComingSoon = () => {
       <p className="uppercase font-bold text-7xl tracking-widest text-center">
         Coming <br /> Soon
       </p>
-      <p className=" text-gray-400">
+      <p className=" text-gray-400 text-center">
         Exciting things are on the way! Stay tuned for updates.
       </p>
       <Button onClick={() => router.push(ROUTES.BLOG)}>Back to Blog</Button>
