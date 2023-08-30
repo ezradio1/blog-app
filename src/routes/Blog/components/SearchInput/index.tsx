@@ -1,7 +1,6 @@
 "use client";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-;
 import { FiSearch } from "react-icons/fi";
 import useIndex from "./index.hook";
 
@@ -17,7 +16,7 @@ const SearchInput = () => {
         withError={false}
         value={search}
         onChange={(evt) => setSearch(evt.target.value)}
-        onKeyDown={handleClickEnter}
+        onKeyDown={(evt) => handleClickEnter(evt.key)}
       />
       <Button onClick={handleSearch}>Search</Button>
     </div>
