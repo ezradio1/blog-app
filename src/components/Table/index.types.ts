@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { PaginationParams } from "./components/Pagination/index.types";
+import { PaginationParams } from "../Pagination/index.types";
 
 export interface TableColumn<T> {
   key: string;

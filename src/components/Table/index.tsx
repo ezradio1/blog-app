@@ -1,7 +1,7 @@
 import Loader from "@/assets/SVG/Loader";
 import clsx from "clsx";
 import EmptyState from "../EmptyState";
-import Pagination from "./components/Pagination";
+import Pagination from "../Pagination";
 import { TableProps } from "./index.types";
 
 const Table = <T extends Record<string, string | number>>(

@@ -1,5 +1,5 @@
 "use client";
-import Pagination from "@/components/Table/components/Pagination";
+import Pagination from "@/components/Pagination";
 import React from "react";
 import useIndex from "./index.hook";
 import { PagintaionBlogProps } from "./index.types";
