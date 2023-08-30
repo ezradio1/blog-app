@@ -1,16 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
 import AppLogo from "@/assets/img/app-logo.png";
-import { MENUS } from "./index.constants";
-import { RxHamburgerMenu } from "react-icons/rx";
-import useIndex from "./index.hook";
-import MobileMenu from "./components/MobileMenu";
-import Tooltip from "../Tooltip";
-import { usePathname, useRouter } from "next/navigation";
-import Container from "../Container";
+import { ROUTES } from "@/constants/routes";
 import clsx from "clsx";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import { RxHamburgerMenu } from "react-icons/rx";
+import Tooltip from "../Tooltip";
+import MobileMenu from "./components/MobileMenu";
+import { MENUS } from "./index.constants";
+import useIndex from "./index.hook";
 
 const Navbar = () => {
   const { isMenuOpen, setIsMenuOpen } = useIndex();
@@ -32,7 +31,10 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="flex flex-col md:flex-row items-center md:gap-2">
+      <div
+        className="flex flex-col md:flex-row items-center md:gap-2 cursor-pointer"
+        onClick={() => router.push(ROUTES.DASHBOARD)}
+      >
         <Image src={AppLogo} alt="app-logo.png" width={30} height={30} />
         <h2 className="md:font-bold text-xs md:text-lg">LuminaLife Blog</h2>
       </div>
