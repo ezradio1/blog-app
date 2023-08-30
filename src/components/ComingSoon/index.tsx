@@ -1,5 +1,5 @@
 "use client";
-;
+
 import Button from "../Button";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/constants/routes";
@@ -14,7 +14,9 @@ const ComingSoon = () => {
       <p className=" text-gray-400 text-center">
         Exciting things are on the way! Stay tuned for updates.
       </p>
-      <Button onClick={() => router.push(ROUTES.BLOG)}>Back to Blog</Button>
+      <Button onClick={() => router.push(ROUTES.DASHBOARD)}>
+        Back to Dashboard
+      </Button>
     </div>
   );
 };
