@@ -8,7 +8,7 @@ import EmptyState from "@/components/EmptyState";
 import ErrorState from "@/components/ErrorState";
 
 const getBlogList = async () => {
-  const res = await fetchData<BlogData[]>(`posts?per_page=4&page=1`);
+  const res = await fetchData<BlogData[]>(`posts?per_page=12&page=1`);
   return res;
 };
 
@@ -16,9 +16,9 @@ const Dashboard = async () => {
   const { data, error } = await getBlogList();
 
   if (error) return <ErrorState />;
-  if (!data) return <EmptyState />;
+  if (!data || data.length === 0) return <EmptyState />;
 
-  const firstData = data.slice(0, 1)?.[0];
+  const firstThreeData = data.slice(1, 4);
 
   return (
     <div>
@@ -27,10 +27,10 @@ const Dashboard = async () => {
       </h2>
       <div className="flex gap-2 w-full">
         <div className="basis-full lg:basis-2/5 w-full">
-          <Headline {...firstData} image={generateRandomImage()} />
+          <Headline {...data.slice(0, 1)?.[0]} image={generateRandomImage()} />
         </div>
-        {data &&
-          data.map((el, key) => (
+        {firstThreeData &&
+          firstThreeData.map((el, key) => (
             <div key={key} className="basis-64 hidden lg:block">
               <BlogCard {...el} image={generateRandomImage(key)} />
             </div>
@@ -41,7 +41,7 @@ const Dashboard = async () => {
         Recomended
       </h2>
       <div className="grid grid-cols-4 gap-6">
-        {data.map((el, key) => (
+        {data.slice(4).map((el, key) => (
           <div key={key} className="basis-60 hidden lg:block">
             <BlogCard {...el} image={generateRandomImage(key * 2)} />
           </div>
