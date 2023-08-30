@@ -1,6 +1,6 @@
 import Modal from "@/components/Modal";
 import useIndex from "./index.hook";
-import { ModalSuccessProps } from "./index.types";
+import type { ModalSuccessProps } from "./index.types";
 import Button from "@/components/Button";
 
 const ModalSuccess = (props: ModalSuccessProps) => {

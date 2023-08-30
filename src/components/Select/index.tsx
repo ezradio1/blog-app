@@ -1,5 +1,5 @@
-import React from "react";
-import { SelectProps } from "./index.types";
+;
+import type { SelectProps } from "./index.types";
 import clsx from "clsx";
 import { FiChevronDown } from "react-icons/fi";
 import useIndex from "./index.hook";

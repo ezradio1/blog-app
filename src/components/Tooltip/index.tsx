@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { TooltipProps } from "./index.types";
+import type { TooltipProps } from "./index.types";
 
 const Tooltip = (props: TooltipProps) => {
   const [isHovered, setIsHovered] = useState(false);

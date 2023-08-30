@@ -1,4 +1,4 @@
-import React from "react";
+;
 import type { PageLayoutProps } from "./index.types";
 import Navbar from "../Navbar";
 import Footer from "../Footer";

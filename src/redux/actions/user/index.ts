@@ -7,7 +7,7 @@ import {
   successResponse,
 } from "@/helpers/apiCall";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { AddUserPayload, UpdateUserPayload } from "./index.types";
+import type { AddUserPayload, UpdateUserPayload } from "./index.types";
 
 export const getUsers = createAsyncThunk(
   "getUsers",

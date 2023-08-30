@@ -1,5 +1,5 @@
 import { ChangeEvent, useRef, useState } from "react";
-import { SelectProps } from "./index.types";
+import type { SelectProps } from "./index.types";
 import useClickOutside from "@/hooks/useClickOutside";
 
 const useIndex = ({ onChange, name }: SelectProps) => {

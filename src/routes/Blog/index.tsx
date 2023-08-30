@@ -3,7 +3,7 @@ import { fetchData } from "@/helpers/fetchData";
 import { generateRandomImage } from "@/helpers/generateRandomImage";
 import type { SearchParamsType } from "@/types/layoutProps";
 import Pagination from "./components/Pagination";
-import { BlogData } from "./index.types";
+import type { BlogData } from "./index.types";
 import SearchInput from "./components/SearchInput";
 import EmptyState from "@/components/EmptyState";
 

@@ -1,4 +1,4 @@
-import { ContainerProps } from "./index.types";
+import type { ContainerProps } from "./index.types";
 
 const Container = (props: ContainerProps) => {
   const { children } = props;

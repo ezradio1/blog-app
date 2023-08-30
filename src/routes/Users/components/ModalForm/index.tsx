@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import React from "react";
+;
 import type { ModalFormProps } from "./index.types";
 import Input from "@/components/Input";
 import useIndex from "./index.hook";

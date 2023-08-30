@@ -1,6 +1,6 @@
 import useClickOutside from "@/hooks/useClickOutside";
 import { useRef, useState } from "react";
-import { MobileMenuProps } from "./index.types";
+import type { MobileMenuProps } from "./index.types";
 import { useRouter } from "next/navigation";
 
 const useIndex = ({ onCloseMenu }: MobileMenuProps) => {

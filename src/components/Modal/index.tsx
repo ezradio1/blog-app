@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { FiX } from "react-icons/fi";
 import Button from "../Button";
-import { ModalProps } from "./index.types";
+import type { ModalProps } from "./index.types";
 import { noop } from "@/helpers/noop";
 
 const Modal = (props: ModalProps) => {
@@ -40,14 +40,14 @@ const Modal = (props: ModalProps) => {
         )}
       >
         {title && (
-          <div >
+          <div>
             <div className="flex justify-between items-center">
               <p className="uppercase font-semibold">{title}</p>
               <div className="py-2 pl-2 cursor-pointer" onClick={onClose}>
                 <FiX />
               </div>
             </div>
-            <hr  className="my-2"/>
+            <hr className="my-2" />
           </div>
         )}
 

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { BlogCardProps } from "./index.types";
+import type { BlogCardProps } from "./index.types";
 import { useRouter } from "next/navigation";
 import { ROUTES } from "@/constants/routes";
 

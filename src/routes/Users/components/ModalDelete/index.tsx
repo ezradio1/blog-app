@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import React from "react";
+;
 import type { ModalDeleteProps } from "./index.types";
 import useIndex from "./index.hook";
 

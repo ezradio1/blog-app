@@ -1,13 +1,11 @@
 import EmptyState from "@/components/EmptyState";
-import { fetchData } from "@/helpers/fetchData";
-import CommentsSection from "./components/CommentsSection";
-import { BlogDetailData, UserDetailData } from "./index.types";
-import Image from "next/image";
-import { generateRandomImage } from "@/helpers/generateRandomImage";
-import Loader from "@/assets/SVG/Loader";
-import AppLogo from "@/assets/img/app-logo.png";
-import { BlogDetailProps } from "@/types/layoutProps";
 import ErrorState from "@/components/ErrorState";
+import { fetchData } from "@/helpers/fetchData";
+import { generateRandomImage } from "@/helpers/generateRandomImage";
+import { BlogDetailProps } from "@/types/layoutProps";
+import Image from "next/image";
+import CommentsSection from "./components/CommentsSection";
+import type { BlogDetailData, UserDetailData } from "./index.types";
 
 const getBlogById = async (blogId: string) => {
   const res = await fetchData<BlogDetailData>(`posts/${blogId}`);

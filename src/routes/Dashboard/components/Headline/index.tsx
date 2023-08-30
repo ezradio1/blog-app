@@ -1,9 +1,8 @@
 "use client"
-import Image from "next/image";
-import React from "react";
-import type { HeadlineProps } from "./index.types";
 import { ROUTES } from "@/constants/routes";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import type { HeadlineProps } from "./index.types";
 
 const Headline = (props: HeadlineProps) => {
   const { id, image, title, body } = props;

@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-import React from "react";
+;
 import { FiSearch } from "react-icons/fi";
 import useIndex from "./index.hook";
 

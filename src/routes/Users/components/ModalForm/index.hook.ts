@@ -1,10 +1,10 @@
 import { addUser, updateUser } from "@/redux/actions/user";
-import { UserAction } from "@/redux/actions/user/index.types";
+import type { UserAction } from "@/redux/actions/user/index.types";
 import { ThunkDispatch } from "@reduxjs/toolkit";
 import { AppRouterState } from "next/dist/client/components/router-reducer/router-reducer-types";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { FieldType, ModalFormProps } from "./index.types";
+import type { FieldType, ModalFormProps } from "./index.types";
 import { MODAL_TYPE } from "../../index.constants";
 import { showToast } from "@/redux/reducers/toast";
 import { EMAIL_REGEX } from "@/constants/regex";

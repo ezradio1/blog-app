@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import React from "react";
+;
 import NotFoundIllustration from "@/assets/img/404-illustration.png";
 import Image from "next/image";
 

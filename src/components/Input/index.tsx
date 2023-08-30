@@ -1,5 +1,5 @@
-import React from "react";
-import { InputProps } from "./index.types";
+;
+import type { InputProps } from "./index.types";
 import clsx from "clsx";
 
 const Input = (props: InputProps) => {

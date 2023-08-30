@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ModalSuccessProps } from "./index.types";
+import type { ModalSuccessProps } from "./index.types";
 
 const useIndex = ({ isOpen, onClose }: ModalSuccessProps) => {
   const [countDown, setCountDown] = useState(10);

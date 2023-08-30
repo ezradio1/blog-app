@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { TagProps } from "./index.types";
+import type { TagProps } from "./index.types";
 
 const Tag = (props: TagProps) => {
   const { children, color = "default", icon = null } = props;

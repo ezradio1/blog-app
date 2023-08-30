@@ -4,7 +4,7 @@ import { showToast } from "@/redux/reducers/toast";
 import { useDispatch } from "react-redux";
 import { ThunkDispatch } from "@reduxjs/toolkit";
 import { AppRouterState } from "next/dist/client/components/router-reducer/router-reducer-types";
-import { UserAction } from "@/redux/actions/user/index.types";
+import type { UserAction } from "@/redux/actions/user/index.types";
 import { useState } from "react";
 
 const useIndex = ({ selectedData, onClose, getData }: ModalDeleteProps) => {

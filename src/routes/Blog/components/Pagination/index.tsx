@@ -1,8 +1,8 @@
 "use client";
 import Pagination from "@/components/Pagination";
-import React from "react";
+;
 import useIndex from "./index.hook";
-import { PagintaionBlogProps } from "./index.types";
+import type { PagintaionBlogProps } from "./index.types";
 
 const PaginationBlog = (props: PagintaionBlogProps) => {
   const { isDataEmpty } = props;

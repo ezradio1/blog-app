@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { ToastProps } from "./index.types"
+import type { ToastProps } from "./index.types"
 
 const initialState: ToastProps = {
   message: "",
