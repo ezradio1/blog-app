@@ -25,14 +25,14 @@ const MobileMenu = (props: MobileMenuProps) => {
       <div
         ref={menuRef}
         className={clsx(
-          "bg-white p-2 pl-0 h-full duration-500 transition-all",
+          "bg-white py-2 pl-0 h-full duration-500 transition-all",
           {
             "w-3/4": visible,
             "w-0": !visible,
           }
         )}
       >
-        <div className="flex pl-4 py-2 justify-between items-center">
+        <div className="flex px-4 py-2 justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={handleClickLogo}>
             <Image src={AppLogo} alt="app-logo.png" width={30} height={30} />
             <h2 className="font-bold text-xs md:text-lg text-primary">
@@ -40,7 +40,7 @@ const MobileMenu = (props: MobileMenuProps) => {
             </h2>
           </div>
 
-          <div className="cursor-pointer p-2" onClick={onCloseMenu}>
+          <div className="cursor-pointer py-2 pl-2" onClick={onCloseMenu}>
             <FiX />
           </div>
         </div>
