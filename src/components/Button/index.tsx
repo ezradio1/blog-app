@@ -1,5 +1,4 @@
-import React from "react";
-import { ButtonProps } from "./index.types";
+import type { ButtonProps } from "./index.types";
 import clsx from "clsx";
 import Loader from "@/assets/SVG/Loader";
 
@@ -9,14 +8,15 @@ const Button = (props: ButtonProps) => {
     children = null,
     loading = false,
     disabled,
+    className,
   } = props;
   const customDisabled = disabled || loading;
 
   const getButtonStyle = () => {
     switch (variant) {
       case "primary":
-        return clsx("bg-primary text-white  border border-primary", {
-          "hover:bg-white hover:text-primary": !loading,
+        return clsx("bg-primary text-white border border-primary", {
+          "hover:bg-white hover:text-primary": !customDisabled,
         });
     }
   };
@@ -26,8 +26,9 @@ const Button = (props: ButtonProps) => {
       disabled={customDisabled}
       {...props}
       className={clsx(
-        "rounded py-[6px] px-[16px] text-sm shadow-md transition-all font-medium h-10",
+        "rounded py-[6px] px-[16px] min-w-[120px] text-sm shadow-md transition-all font-medium h-10",
         getButtonStyle(),
+        className,
         { "opacity-60 cursor-not-allowed": customDisabled }
       )}
     >
