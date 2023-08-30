@@ -1,6 +1,6 @@
 import EmptyState from "@/components/EmptyState";
 import ErrorState from "@/components/ErrorState";
-import { fetchData } from "@/helpers/fetchData";
+import { fetchDataForSSR } from "@/helpers/fetchDataForSSR";
 import { generateRandomImage } from "@/helpers/generateRandomImage";
 import { BlogDetailProps } from "@/types/layoutProps";
 import Image from "next/image";
@@ -8,12 +8,12 @@ import CommentsSection from "./components/CommentsSection";
 import type { BlogDetailData, UserDetailData } from "./index.types";
 
 const getBlogById = async (blogId: string) => {
-  const res = await fetchData<BlogDetailData>(`posts/${blogId}`);
+  const res = await fetchDataForSSR<BlogDetailData>(`posts/${blogId}`);
   return res;
 };
 
 const getUserById = async (userId: number) => {
-  const res = await fetchData<UserDetailData>(`users/${userId}`);
+  const res = await fetchDataForSSR<UserDetailData>(`users/${userId}`);
   return res;
 };
 

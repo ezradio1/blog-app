@@ -1,5 +1,5 @@
 import BlogCard from "@/components/BlogCard";
-import { fetchData } from "@/helpers/fetchData";
+import { fetchDataForSSR } from "@/helpers/fetchDataForSSR";
 import { generateRandomImage } from "@/helpers/generateRandomImage";
 import ExploreMore from "./components/ExploreMore";
 import Headline from "./components/Headline";
@@ -8,7 +8,7 @@ import EmptyState from "@/components/EmptyState";
 import ErrorState from "@/components/ErrorState";
 
 const getBlogList = async () => {
-  const res = await fetchData<BlogData[]>(`posts?per_page=12&page=1`);
+  const res = await fetchDataForSSR<BlogData[]>(`posts?per_page=12&page=1`);
   return res;
 };
 

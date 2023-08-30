@@ -1,5 +1,5 @@
 import BlogCard from "@/components/BlogCard";
-import { fetchData } from "@/helpers/fetchData";
+import { fetchDataForSSR } from "@/helpers/fetchDataForSSR";
 import { generateRandomImage } from "@/helpers/generateRandomImage";
 import type { SearchParamsType } from "@/types/layoutProps";
 import Pagination from "./components/Pagination";
@@ -10,7 +10,7 @@ import EmptyState from "@/components/EmptyState";
 const getBlogList = async ({ searchParams }: SearchParamsType) => {
   const page = searchParams?.["page"] || "1";
   const search = searchParams?.["search"] || "";
-  const res = await fetchData<BlogData[]>(
+  const res = await fetchDataForSSR<BlogData[]>(
     `posts?per_page=8&page=${page}&title=${search}`
   );
   return res;

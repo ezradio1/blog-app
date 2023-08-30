@@ -1,11 +1,11 @@
 import DummyPhoto from "@/assets/img/dummy-photo.png";
 import EmptyState from "@/components/EmptyState";
-import { fetchData } from "@/helpers/fetchData";
+import { fetchDataForSSR } from "@/helpers/fetchDataForSSR";
 import Image from "next/image";
 import type { CommentsData, CommentsSectionProps } from "./index.types";
 
 const getUserComments = async (blogId: string) => {
-  const res = await fetchData<CommentsData[]>(`posts/${blogId}/comments`);
+  const res = await fetchDataForSSR<CommentsData[]>(`posts/${blogId}/comments`);
   return res;
 };
 

@@ -3,7 +3,7 @@ interface ApiResponse<T> {
   error: null | string;
 }
 
-export async function fetchData<T>(endpoint: string): Promise<ApiResponse<T>> {
+export async function fetchDataForSSR<T>(endpoint: string): Promise<ApiResponse<T>> {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`);
 
   if (!response.ok) {
