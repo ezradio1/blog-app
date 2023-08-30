@@ -1,12 +1,19 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import type { HeadlineProps } from "./index.types";
+import { ROUTES } from "@/constants/routes";
+import { useRouter } from "next/navigation";
 
 const Headline = (props: HeadlineProps) => {
-  const { image, title, body } = props;
+  const { id, image, title, body } = props;
+  const router = useRouter();
 
   return (
-    <div className="w-full cursor-pointer">
+    <div
+      className="w-full cursor-pointer"
+      onClick={() => router.push(`${ROUTES.BLOG_DETAIL}/${id}`)}
+    >
       <div className="group border relative w-full h-96">
         <Image src={image} alt="blog-image" fill objectFit="cover" />
         <div className="h-full z-0 w-full absolute bg-gradient-to-b from-transparent to-black opacity-60"></div>
