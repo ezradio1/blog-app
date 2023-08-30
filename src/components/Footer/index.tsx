@@ -26,7 +26,7 @@ const Footer = () => {
       <Container>
         <div className="py-4 md:py-8 flex flex-col md:flex-row gap-4 justify-between">
           <div className="text-center md:text-left">
-            <h2 className="font-semibold">Sign up to our newsletter</h2>
+            <h2 className="font-semibold">Subscribe to our newsletter</h2>
             <p className="text-xs text-gray-400">
               Stay up to date with latest news, announcements, and articles
             </p>
