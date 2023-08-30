@@ -1,4 +1,3 @@
-;
 import type { PageLayoutProps } from "./index.types";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -11,8 +10,8 @@ const PageLayout = (props: PageLayoutProps) => {
   const { children, isSSR = true } = props;
   return (
     <>
+      <Navbar />
       <Container>
-        <Navbar />
         <div className="min-h-[calc(100vh-70px-210px)] mt-[70px] py-4">
           {!isSSR ? (
             <Provider store={store}>
