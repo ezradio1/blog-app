@@ -85,7 +85,7 @@ const Table = <T extends unknown>(props: TableProps<T>) => {
                         >
                           {column.key === "no"
                             ? `${Number(
-                                rowIndex + 1 + (currentPage - 1) * 10
+                                rowIndex + 1 + (currentPage - 1) * rowsPerPage
                               )}.`
                             : column.render
                             ? column.render(item)
