@@ -33,7 +33,7 @@ const Select = (props: SelectProps) => {
           {label}
         </label>
       ) : null}
-      <div ref={selectRef}>
+      <div ref={selectRef} onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
         <div className="relative">
           <input
             {...props}
@@ -44,10 +44,9 @@ const Select = (props: SelectProps) => {
                   }`
                 : ""
             }
-            onClick={() => setIsOpen(!isOpen)}
             readOnly
             className={clsx(
-              "rounded w-full cursor-pointer py-[6px] h-10 px-[16px] text-sm  outline-primary border-gray-400 border font-medium",
+              "rounded w-full py-[6px] h-10 px-[16px] text-sm  outline-primary border-gray-400 border font-medium",
               {
                 "border-red-500": errorMsg !== "",
               },
