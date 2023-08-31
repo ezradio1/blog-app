@@ -18,7 +18,10 @@ const useIndex = () => {
   };
 
   const handleSearch = () => {
-    window.location.replace(`${pathname}?${new URLSearchParams({ search })}`);
+    const searchQueryParams = search
+      ? `?${new URLSearchParams({ search })}`
+      : ""; 
+    window.location.replace(`${pathname}${searchQueryParams}`);
   };
 
   return { search, setSearch, handleSearch, handleClickEnter };
