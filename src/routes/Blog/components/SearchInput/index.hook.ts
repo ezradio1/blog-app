@@ -1,6 +1,6 @@
 import useGetAllQueryParams from "@/hooks/useGetAllQueryParams";
 import { usePathname, useRouter } from "next/navigation";
-import { KeyboardEventHandler, useState } from "react";
+import { useState } from "react";
 
 const useIndex = () => {
   const router = useRouter();
@@ -18,7 +18,7 @@ const useIndex = () => {
   };
 
   const handleSearch = () => {
-    router.push(`${pathname}?${new URLSearchParams({ search })}`);
+    window.location.replace(`${pathname}?${new URLSearchParams({ search })}`);
   };
 
   return { search, setSearch, handleSearch, handleClickEnter };
